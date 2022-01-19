@@ -8,6 +8,7 @@ import java.net.*;
 
 public class BitCoinPrice {
 
+    // Get BPI rate of given currency
     public static double getRate(JSONObject currency) {
         NumberFormat format = NumberFormat.getInstance(Locale.getDefault()); // Ready to read number
         Number number;
@@ -22,6 +23,7 @@ public class BitCoinPrice {
         return price;
     }
 
+    // Get Currency name
     public static String getDescription(JSONObject currency) {
         String descr= "";
         descr = (String) currency.get("description"); // read “description” from usd object.
